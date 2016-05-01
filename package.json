@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "chart.js": "^2.0.2",
+    "dygraphs": "^1.1.1",
     "electron-prebuilt": "^0.37.8"
   },
   "bin": "./bin"

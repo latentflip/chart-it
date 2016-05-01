@@ -2,18 +2,35 @@
 
 const launch = require('./launch');
 
-launch.createChart({
-  type: 'line',
-  datasets: [{
-    data: [1,2,3,2,4]
-  }]
-});
-
-//var electron = require('electron-prebuilt');
-//var cp = require('child_process');
-//var args = process.argv.slice(2);
-//args.unshift(__dirname + '/index.js');
+// launch.createChart({
+//   type: 'line',
+//   datasets: [{
+//     data: [1,2,3,2,4]
+//   }]
+// });
 //
-//const child = cp.spawn(electron, args, { stdio: ['ipc', 'pipe', 'pipe'] });
-//child.stdout.pipe(process.stdout);
-//child.send({ chart: } });
+//launch.createChart({
+//  engine: 'chart.js',
+//  chart: {
+//    type: 'line',
+//    data: {
+//      labels: [0,1,2,3,4,5,6,7,8],
+//      datasets: [{
+//        data: [1,2,3,4,3,3,4,2,4]
+//      }]
+//    }
+//  }
+//});
+
+
+
+launch.createChart({
+  engine: 'dygraph',
+  chart: {
+    data: [
+      [0, 1, 4],
+      [1, 3, 6],
+      [2, 3, 5]
+    ]
+  }
+})
