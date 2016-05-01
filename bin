@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+
+const launch = require('./launch');
+
+launch.createChart({
+  type: 'line',
+  datasets: [{
+    data: [1,2,3,2,4]
+  }]
+});
+
+//var electron = require('electron-prebuilt');
+//var cp = require('child_process');
+//var args = process.argv.slice(2);
+//args.unshift(__dirname + '/index.js');
+//
+//const child = cp.spawn(electron, args, { stdio: ['ipc', 'pipe', 'pipe'] });
+//child.stdout.pipe(process.stdout);
+//child.send({ chart: } });
