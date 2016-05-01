@@ -25,9 +25,6 @@ require('electron').ipcRenderer.on('renderChart', function(event, message) {
     case 'dygraph': {
       showHideElements('dygraphs');
       const chart = new Dygraph(elements['dygraphs'], message.chart.data, message.chart.options || {});
-      window.addEventListener('resize', () => {
-        chart.resize();
-      });
       break;
     }
 
